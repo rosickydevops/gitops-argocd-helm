@@ -40,18 +40,41 @@ Kubernetes Cluster
 
 ```
 gitops-argocd-helm
-├ apps
-│  └ nginx
-│     ├ Chart.yaml
-│     ├ values.yaml
-│     └ templates
-│        ├ deployment.yaml
-│        └ service.yaml
 ├ argocd
-│  └ application.yaml
-├ environments
-│   ├ dev
-│   └ prod
+│  ├ app-main
+│  │  ├ dev
+│  │  │  └ dev-main.yaml
+│  │  └ prod
+│  │     └ prod-main.yaml
+│  │
+│  └ chart-app
+│     ├ dev
+│     │  ├ Chart.yaml
+│     │  ├ values.yaml
+│     │  └ templates
+│     │     └ values.yaml
+│     │
+│     └ prod
+│        ├ Chart.yaml
+│        ├ values.yaml
+│        └ templates
+│           └ values.yaml
+│
+├ chart
+│  ├ templates
+│  │  ├ deployment.yaml
+│  │  ├ service.yaml
+│  │  └ ingress.yaml
+│  │
+│  ├ values
+│  │  ├ dev
+│  │  │  └ values.yaml
+│  │  └ prod
+│  │     └ values.yaml
+│  │
+│  ├ Chart.yaml
+│  └ values.yaml
+│
 └ README.md
 
 ```

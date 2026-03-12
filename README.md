@@ -26,13 +26,22 @@ Application configurations are stored in Git and synchronized to the cluster usi
 Developer
    │
    ▼
-Git Repository
+Git Push
    │
    ▼
-ArgoCD
+GitHub
    │
    ▼
-Kubernetes Cluster
+ArgoCD bootstrap app (app-main)
+   │
+   ▼
+Helm chart-app
+   │
+   ▼
+Application deploy chart
+   │
+   ▼
+Kubernetes cluster
 ```
 ---
 

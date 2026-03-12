@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 
 metadata:
-  name: nginx-app
+  name: nginx-dev
   namespace: argocd
 
 spec:
@@ -12,11 +12,15 @@ spec:
   source:
     repoURL: https://github.com/rosicky_devops/gitops-argocd-helm
     targetRevision: HEAD
-    path: apps/nginx
+    path: chart
+
+    helm:
+      valueFiles:
+        - values/dev/values.yaml
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: dev
 
   syncPolicy:
     automated:

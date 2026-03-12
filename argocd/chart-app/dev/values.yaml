@@ -1,0 +1,11 @@
+appName: nginx-dev
+
+repoURL: https://github.com/rosicky_devops/gitops-argocd-helm
+
+targetRevision: HEAD
+
+chartPath: chart
+
+namespace: dev
+
+valuesFile: values/dev/values.yaml
